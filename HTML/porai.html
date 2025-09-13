@@ -89,7 +89,7 @@
         
     /* Conteúdo */
     .conteudo {
-    max-width: 800px;
+    max-width: 900px;
     margin: 30px auto;
     padding: 20px;
     background: white;
@@ -115,6 +115,28 @@
     .post-content {
     line-height: 1.6;
     margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+    }
+    
+    .post-text {
+    flex: 1;
+    min-width: 300px;
+    }
+    
+    .post-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    }
+    
+    .post-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
         
     .btn-continuar {
@@ -132,6 +154,21 @@
     background: linear-gradient(to left, rgb(255, 60, 190), rgb(160, 10, 125));
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .post-content {
+            flex-direction: column;
+        }
+        
+        nav ul {
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 5px;
+        }
     }
     </style>
 </head>
@@ -158,16 +195,31 @@
         </nav>
     </header>
 
-    <!-- Sobre -->
+    <!-- Conteúdo -->
     <div class="conteudo">
         <div class="post-header">
-            <h2 class="post-title">Bem-estar Corpo Cosméticos Em Curitiba - 
-Onde fazer limpeza de pele em Curitiba</h2>
+            <h2 class="post-title">Bem-estar Corpo Cosméticos Em Curitiba - Onde fazer limpeza de pele em Curitiba</h2>
             <div class="post-date">11/09/2025</div>
         </div>
         
         <div class="post-content">
-            <p>Em busca de onde fazer limpeza de pele em Curitiba? Pois vem comigo que hoje vou te indicar 3 lugares onde já fiz e gostei do serviço! Gaya Bem Estar O tratamento inclui limpeza…</p>
+            <div class="post-text">
+                <p>Em busca de onde fazer limpeza de pele em Curitiba? Pois vem comigo que hoje vou te indicar 3 lugares onde já fiz e gostei do serviço! </p>
+                <p>Curitiba oferece diversas opções de qualidade para cuidados com a pele. A limpeza de pele profissional é essencial para manter a saúde da pele, remover cravos e impurezas, e prevenir o aparecimento de acne.</p>
+                <p>Entre os lugares recomendados estão:</p>
+                <ul>
+                    <li><strong>Gaya Bem Estar</strong> - Tratamento completo com produtos de alta qualidade</li>
+                    <li><strong>Clínica da Pele</strong> - Profissionais especializados e equipamentos modernos</li>
+                    <li><strong>Espaço Zen</strong> - Ambiente relaxante com técnicas avançadas de estética</li>
+                </ul>
+                <p>Cada local oferece diferentes técnicas e produtos, mas todos com foco em resultados eficazes e satisfatórios.</p>
+            </div>
+            
+            <div class="post-image">
+                <img src="https://www.coisasdediva.com.br/wp-content/uploads/2019/04/pele-730x520.jpg" alt="Limpeza de pele em Curitiba - Locais recomendados">
+                <p><em>Limpeza de pele profissional para uma pele saudável e revitalizada</em></p>
+            </div>
+        </div>
         
         <a href="#" class="btn-continuar">ver</a>
     </div>
