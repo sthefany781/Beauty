@@ -89,7 +89,7 @@
         
     /* Conteúdo */
     .conteudo {
-    max-width: 800px;
+    max-width: 900px;
     margin: 30px auto;
     padding: 20px;
     background: white;
@@ -115,6 +115,28 @@
     .post-content {
     line-height: 1.6;
     margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+    }
+    
+    .post-text {
+    flex: 1;
+    min-width: 300px;
+    }
+    
+    .post-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    }
+    
+    .post-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
         
     .btn-continuar {
@@ -132,6 +154,21 @@
     background: linear-gradient(to left, rgb(255, 60, 190), rgb(160, 10, 125));
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .post-content {
+            flex-direction: column;
+        }
+        
+        nav ul {
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 5px;
+        }
     }
     </style>
 </head>
@@ -158,7 +195,7 @@
         </nav>
     </header>
 
-    <!-- Sobre -->
+    <!-- Conteúdo -->
     <div class="conteudo">
         <div class="post-header">
             <h2 class="post-title">Mari Maria Makeup: o que vale a pena comprar da marca</h2>
@@ -166,7 +203,21 @@
         </div>
         
         <div class="post-content">
-            <p>A Mari Maria Makeup conquistou o mercado nacional pelo carisma da sua fundadora – a influencer Mari Maria – e pela qualidade dos produtos que vem sendo lançados, especialmente de alguns anos para cá. Hoje, é fácil reconhecer a identidade da marca, com tudo laranjinha, e quais são seus best sellers. Pois eu e as meninas já testamos várias coisas e, a seguir, quero contar para você, afinal, o que vale a pena mesmo comprar! O que vale a pena…</p>
+            <div class="post-text">
+                <p>A Mari Maria Makeup conquistou o mercado nacional pelo carisma da sua fundadora – a influencer Mari Maria – e pela qualidade dos produtos que vem sendo lançados, especialmente de alguns anos para cá. Hoje, é fácil reconhecer a identidade da marca, com tudo laranjinha, e quais são seus best sellers. Pois eu e as meninas já testamos várias coisas e, a seguir, quero contar para você, afinal, o que vale a pena mesmo comprar! O que vale a pena…</p>
+                <p>A marca se destaca por seus produtos de alta qualidade e preços acessíveis, com uma identidade visual marcante na cor laranja. Entre os produtos mais elogiados pelos consumidores estão:</p>
+                <ul>
+                    <li>Bases com ótima cobertura e acabamento natural</li>
+                    <li>Paletas de sombras pigmentadas e fáceis de blendar</li>
+                    <li>Batons com textura confortável e cores vibrantes</li>
+                    <li>Iluminadores que dão glow natural à pele</li>
+                </ul>
+            </div>
+            
+            <div class="post-image">
+                <img src="https://www.coisasdediva.com.br/wp-content/uploads/2025/09/image-4.png" alt="Produtos Mari Maria Makeup - O que vale a pena comprar">
+                <p><em>Os produtos mais populares da Mari Maria Makeup</em></p>
+            </div>
         </div>
         
         <a href="#" class="btn-continuar">continuar lendo</a>
