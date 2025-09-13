@@ -89,7 +89,7 @@
         
     /* Conteúdo */
     .conteudo {
-    max-width: 800px;
+    max-width: 900px;
     margin: 30px auto;
     padding: 20px;
     background: white;
@@ -115,6 +115,28 @@
     .post-content {
     line-height: 1.6;
     margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+    }
+    
+    .post-text {
+    flex: 1;
+    min-width: 300px;
+    }
+    
+    .post-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    }
+    
+    .post-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
         
     .btn-continuar {
@@ -132,6 +154,21 @@
     background: linear-gradient(to left, rgb(255, 60, 190), rgb(160, 10, 125));
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .post-content {
+            flex-direction: column;
+        }
+        
+        nav ul {
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 5px;
+        }
     }
     </style>
 </head>
@@ -158,7 +195,7 @@
         </nav>
     </header>
 
-    <!-- Sobre -->
+    <!-- Conteúdo -->
     <div class="conteudo">
         <div class="post-header">
             <h2 class="post-title">Ácido ferúlico: o que é, pra quê serve e dicas de produtos!</h2>
@@ -166,7 +203,22 @@
         </div>
         
         <div class="post-content">
-            <p>Você sabe o que é e pra quê serve o ácido ferúlico? Se não faz muita ideia, chegou ao post certo. Vem que eu vou te responder tudo isso e ainda indicar produtos com…</p>
+            <div class="post-text">
+                <p>Você sabe o que é e pra quê serve o ácido ferúlico? Se não faz muita ideia, chegou ao post certo. Vem que eu vou te responder tudo isso e ainda indicar produtos...</p>
+                <p>O ácido ferúlico é um poderoso antioxidante natural encontrado em plantas como sementes de arroz, trigo e aveia. Ele ajuda a proteger a pele contra os danos causados pelos radicais livres e pelos raios UV, além de potencializar os efeitos de outros antioxidantes como as vitaminas C e E.</p>
+                <p>Entre seus principais benefícios estão:</p>
+                <ul>
+                    <li>Proteção contra danos solares</li>
+                    <li>Redução de sinais de envelhecimento</li>
+                    <li>Clareamento de manchas</li>
+                    <li>Melhora da textura da pele</li>
+                </ul>
+            </div>
+            
+            <div class="post-image">
+                <img src="https://www.coisasdediva.com.br/wp-content/uploads/2023/10/Acido-Ferulico-3-520x400.png" alt="Ácido Ferúlico - Benefícios e aplicações">
+                <p><em>O ácido ferúlico é um poderoso antioxidante para a pele</em></p>
+            </div>
         </div>
         
         <a href="#" class="btn-continuar">continuar lendo</a>
