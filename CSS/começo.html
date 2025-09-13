@@ -83,7 +83,7 @@
         
     /* Conteúdo */
     .conteudo {
-    max-width: 800px;
+    max-width: 900px;
     margin: 30px auto;
     padding: 20px;
     background: white;
@@ -109,6 +109,28 @@
     .post-content {
     line-height: 1.6;
     margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+    }
+    
+    .post-text {
+    flex: 1;
+    min-width: 300px;
+    }
+    
+    .post-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    }
+    
+    .post-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
         
     .btn-continuar {
@@ -126,5 +148,20 @@
     background: linear-gradient(to left, rgb(255, 60, 190), rgb(160, 10, 125));
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .post-content {
+            flex-direction: column;
+        }
+        
+        nav ul {
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 5px;
+        }
     }
     </style>
